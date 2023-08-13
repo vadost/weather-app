@@ -16,9 +16,8 @@
   <mat-card-actions>
     <button mat-raised-button color="primary" *ngIf="mode === 'search'"
             [disabled]="Obj.keys(favoriteCities).includes(loadedCityName)"
-            (click)="saveFavoriteCity.emit(loadedCityName)">Save to Fav</button>
-    <button mat-raised-button color="primary" *ngIf="mode === 'favorites'"
-            [disabled]=""
-            (click)="removeFavoriteCity.emit()">Remove from Fav</button>
+            (click)="saveFavoriteCity.emit(loadedCityName)">Add to Favorites</button>
+    <button mat-raised-button color="warn" *ngIf="mode === 'favorites'"
+            (click)="removeFavoriteCity.emit()">Remove from Favorites</button>
   </mat-card-actions>
 </mat-card>

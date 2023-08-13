@@ -4,7 +4,7 @@
       <mat-card-title>Current Weather for {{weather.name}}</mat-card-title>
       <mat-card-subtitle>
         <div>Temperature: {{ weather.main.temp | number:'1.0-0'}} °C</div>
-        <div>Humidity: {{ weather.main.humidity }}</div>
+        <div class="humidity">Humidity: {{ weather.main.humidity }}</div>
         <div>Weather: {{ weather.weather[0].description }}</div>
       </mat-card-subtitle>
       <img class="weather-icon" mat-card-sm-image appWeatherIcon [iconCode]="weather.weather[0].icon">

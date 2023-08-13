@@ -36,6 +36,7 @@ export class CityWeatherComponent implements OnChanges {
     if(changes['loadedCityName'] && this.loadedCityName) {
       this.cityName = this.loadedCityName;
     }
+    console.log('favoriteCities', this.favoriteCities);
   }
 
 }

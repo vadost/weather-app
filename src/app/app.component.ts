@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DynamicScriptLoaderService } from './core/dynamic-script-loader.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'weather-app';
+
+  constructor(private dynamicScriptLoader: DynamicScriptLoaderService) {
+    dynamicScriptLoader.loadScript('chartjs');
+  }
 }

@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <h1 class="title">Weather App</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Search</a></li>
+        <li><a routerLink="/favorite-cities" routerLinkActive="active">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+</mat-toolbar>
+<app-progress-bar-container></app-progress-bar-container>

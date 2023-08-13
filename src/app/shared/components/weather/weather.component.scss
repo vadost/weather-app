@@ -1,0 +1,20 @@
+.weather-icon {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+mat-card {
+  display: flex;
+  width: 450px;
+  margin: 0 auto;
+}
+
+mat-card-actions {
+  margin: 5px auto;
+}
+
+@media (max-width: 500px) {
+  mat-card {
+    width: 380px;
+  }
+}

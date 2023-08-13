@@ -1,0 +1,13 @@
+<div class="empty-list" *ngIf="Obj.keys(favoriteCities).length === 0">
+  <p>You don't have any saved favorite city</p>
+  <button mat-raised-button color="primary" routerLink="/"> Add new city</button>
+</div>
+
+<div *ngIf="Obj.keys(favoriteCities).length > 0" class="fav-block">
+  <div *ngFor="let cityName of Obj.keys(favoriteCities)" class="fav-item">
+    <app-weather [mode]="'favorites'"
+                 [forecast]="favoriteCities[cityName].forecast"
+                 [weather]="favoriteCities[cityName].weather"
+                 (removeFavoriteCity)="removeFavoriteCity.emit(cityName)"></app-weather>
+  </div>
+</div>

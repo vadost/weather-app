@@ -1,0 +1,19 @@
+.weather-component {
+  width: 500px;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 450px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  form {
+    width: 380px;
+  }
+}

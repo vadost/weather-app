@@ -1,0 +1,17 @@
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input matInput placeholder="Ex. San Francisco" [(ngModel)]="cityName" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <button mat-raised-button color="primary"
+          [disabled]="cityName.trim() === '' || cityWeatherLoading || cityForecastLoading"
+          (click)="onLoadWeather()">Load Weather</button>
+</form>
+
+<app-weather class="weather-component"
+             [mode]="'search'"
+             [weather]="cityWeather"
+             [forecast]="cityForecast"
+             [loadedCityName]="loadedCityName"
+             [favoriteCities]="favoriteCities"
+             (saveFavoriteCity)="saveFavoriteCity.emit($event)"></app-weather>

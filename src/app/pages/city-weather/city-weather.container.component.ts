@@ -46,6 +46,7 @@ export class CityWeatherContainerComponent {
     this.loadedCityName$ = this.store.pipe(select(getloadedCityName));
     this.favoriteCities$ = this.store.pipe(select(getFavoriteCities));
   }
+
   loadWeather(cityName: string) {
     this.store.dispatch(CityWeatherActions.loadCityWeather({data: cityName}));
     this.store.dispatch(CityForecastActions.loadCityForecast({data: cityName}));
